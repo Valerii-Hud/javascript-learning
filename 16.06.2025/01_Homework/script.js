@@ -24,3 +24,32 @@ console.log(Object.getOwnPropertyDescriptor(user, 'name'));
 
 Object.defineProperty(user, 'gender', { value: 'male' });
 console.log(Object.getOwnPropertyDescriptor(user, 'gender'));
+
+const wrapper = document.querySelector('.wrapper'),
+  open = wrapper.querySelector('.btn'),
+  menu = document.querySelector('.menu');
+
+wrapper.style.cssText = `
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  `;
+open.style.cssText = `
+  background-color: red;
+  position: absolute;
+  rigth: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 45px;
+  cursor: pointer;
+`;
+
+open.addEventListener('click', () => {
+  menu.classList.toggle('menu');
+});
+
+const close = document.querySelector('.close');
+
+close.addEventListener('click', () => {
+  menu.classList.remove('menu');
+});

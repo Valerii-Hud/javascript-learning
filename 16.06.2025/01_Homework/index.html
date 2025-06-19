@@ -4,8 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .menu_disabled {
+        transition: all 2s ease;
+        /* display: none; */
+        left: -100%;
+        position: absolute;
+        height: 100vh;
+      }
+      .menu {
+        left: 0;
+        display: block;
+        position: fixed;
+        padding: 100px 100px;
+        background: rgb(35, 0, 190);
+        height: 100vh;
+        transition: all 2s ease;
+        ul {
+          list-style-type: none;
+          li {
+            color: white;
+            font-size: 30px;
+            position: relative;
+            text-transform: uppercase;
+            font-family: cursive;
+          }
+
+          li::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffffff;
+            top: 10px;
+            border-radius: 100%;
+            left: -40px;
+          }
+        }
+      }
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: white;
+        transition: all 0.5s ease;
+      }
+      .close:hover {
+        color: #000;
+      }
+    </style>
   </head>
+
   <body>
+    <div class="menu menu_disabled">
+      <ul>
+        <li>Something 1</li>
+        <li>Something 2</li>
+        <li>Something 3</li>
+        <li>Something 4</li>
+        <li>Something 5</li>
+        <li>Something 6</li>
+      </ul>
+      <button class="close">&CircleTimes;</button>
+    </div>
+    <div class="wrapper">
+      <button class="btn">&times;</button>
+    </div>
     <script defer src="script.js"></script>
   </body>
 </html>
