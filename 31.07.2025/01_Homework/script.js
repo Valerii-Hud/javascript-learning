@@ -1,9 +1,9 @@
 const str =
   'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore ea assumenda maiores quam quasi expedita deleniti ipsum, ut iste doloribus! Neque consequatur iusto voluptate unde esse pariatur sit quaerats hic.';
 
-function output(input) {
+const output = (input) => {
   console.log(input);
-}
+};
 
 output(str.length);
 output(str.substring(1, 5));
